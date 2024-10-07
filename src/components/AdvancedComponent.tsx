@@ -4,7 +4,7 @@ import { withSolid } from "solid-element";
 compose(
   register("advanced-component", { data: "Default data" }),
   withSolid
-)((props, options) => {
+)((props) => {
   return <div>Advanced component with data: {props.data}</div>;
 });
 
