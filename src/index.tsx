@@ -1,5 +1,6 @@
 /* @refresh reload */
 import { render } from "solid-js/web";
+import "./components/SlottedElement";
 import "./components/MyComponent";
 import "./components/AdvancedComponent";
 import "./components/NoShadowComponent";
@@ -7,10 +8,14 @@ import "./components/NoShadowComponent";
 function App() {
   return (
     <div>
-      <h1>My Solid Elements App</h1>
-      <my-component message="Custom message"></my-component>
-      <advanced-component data="component data here"></advanced-component>
-      <no-shadow-component text="no shadow dom data here"></no-shadow-component>
+      <h1>Slotted Element Demo</h1>
+      <slotted-element>
+        <p>And this is everything else</p>
+        <ul slot="footer">
+          <li>This is the footer</li>
+        </ul>
+        <h1 slot="header">This is the header</h1>
+      </slotted-element>
     </div>
   );
 }
